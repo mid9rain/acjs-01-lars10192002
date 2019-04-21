@@ -6,8 +6,24 @@
 // 例如   [1, 2, 3, 4, 5]
 // 會回傳 [1, 2, Fizz, 4, Buzz]
 
-function fizzBuzz(input) {
-  // 把你的解答寫在這裡。要記得 return 喔。
+function fizzBuzz(input) 
+{
+  var result = '';
+ 
+  for(var i=1 ; i<=input ; i++ ){
+    if(i>1)result+=' '
+    if((i%3===0) && (i%5===0)){
+      result+="FizzBuzz"
+      }else if (i%3===0){
+      result+="Fizz"
+      }else if (i%5===0){
+      result+="Buzz"
+      }else{
+      result+=i
+      }
+    
+  }  
+  return result;
 }
 
-module.exports = {fizzBuzz};
+module.exports = { fizzBuzz };
